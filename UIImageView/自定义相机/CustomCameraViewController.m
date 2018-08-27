@@ -350,6 +350,8 @@
         //需要把图片裁剪未 指定尺寸
         //需要把图片裁剪未 指定尺寸
         //扩展  UIImage
+        //123456
+        
         
         [self.imgs addObject:tempImg];
         
