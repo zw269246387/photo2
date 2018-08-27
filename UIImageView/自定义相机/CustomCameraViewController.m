@@ -357,6 +357,7 @@
         
         //修改的master
         
+        //节点2 的修改 
         [self.imgs addObject:tempImg];
         
         [self update];
