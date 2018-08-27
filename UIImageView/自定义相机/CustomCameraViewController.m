@@ -355,7 +355,7 @@
         
         [tempImg imageAtRect:CGRectMake(0, 0, MSScreenW, 300)];
         
-        
+        //修改的master
         
         [self.imgs addObject:tempImg];
         
