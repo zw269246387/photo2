@@ -353,7 +353,8 @@
         //扩展  UIImage
         //123456
         
-        [tempImg imageAtRect:CGRectMake(0, 0, MSScreenW, 300)];
+        //裁剪后的图片
+        UIImage *tempImg2 = [tempImg imageAtRect:CGRectMake(0, 0, MSScreenW, 300)];
         
         
         
