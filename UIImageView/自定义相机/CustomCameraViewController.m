@@ -351,6 +351,7 @@
         //需要把图片裁剪未 指定尺寸
         //扩展  UIImage
         
+        //节点2 的修改 
         [self.imgs addObject:tempImg];
         
         [self update];
