@@ -356,6 +356,7 @@
         //裁剪后的图片
         UIImage *tempImg2 = [tempImg imageAtRect:CGRectMake(0, 0, MSScreenW, 300)];
         
+        NSLog(@"%@",tempImg2);
         
         
         [self.imgs addObject:tempImg];
