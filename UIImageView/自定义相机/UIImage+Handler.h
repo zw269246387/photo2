@@ -10,4 +10,6 @@
 
 @interface UIImage (Handler)
 
+- (UIImage *)imageAtRect:(CGRect)rect;
+
 @end
