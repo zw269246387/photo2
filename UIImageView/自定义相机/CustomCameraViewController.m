@@ -359,6 +359,8 @@
         [self jumpImageView:jpegData];
         
         //新增节点2的修改
+        
+        //22222 
     }];
     
 }
