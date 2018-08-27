@@ -348,6 +348,8 @@
 //        UIImageWriteToSavedPhotosAlbum(tempImg, self, nil, nil);
         
         //需要把图片裁剪未 指定尺寸
+        //需要把图片裁剪未 指定尺寸
+        //扩展  UIImage
         
         [self.imgs addObject:tempImg];
         
