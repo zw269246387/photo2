@@ -15,6 +15,7 @@
 #import "ObtainListViewController.h"
 //自定义相机
 #import "CustomCameraViewController.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 /**
@@ -31,6 +32,11 @@
  数据源
  */
 @property (nonatomic, strong) NSMutableArray *listArray;
+
+/**
+ 测试 画圆角
+ */
+@property (nonatomic, strong) UIView *bottemV;
 
 @end
 
@@ -97,9 +103,41 @@
     
     [self.listTableView mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.edges.equalTo(self.view);
+//        make.edges.equalTo(self.view);
+        make.left.right.top.equalTo(self.view);
+        make.height.offset(200);
         
     }];
+    
+    
+    [self.view addSubview:self.bottemV];
+    
+//    self.bottemV.frame = CGRectMake(20, 400, 100, 100);
+    [self.bottemV mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        make.left.equalTo(self.view).offset(20);
+        make.right.equalTo(self.view).offset(-20);
+        make.top.equalTo(self.listTableView.mas_bottom).offset(20);
+        make.height.offset(50);
+
+    }];
+    [self.bottemV setNeedsUpdateConstraints];
+    [self.bottemV setNeedsLayout];
+    [self.bottemV layoutIfNeeded];
+  
+    NSLog(@"%@",self.bottemV);
+    
+    //得到view的遮罩路径
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bottemV.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(20,20)];
+    //创建 layer
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame = self.bottemV.bounds;
+    //赋值
+    maskLayer.path = maskPath.CGPath;
+//    maskLayer.backgroundColor = [UIColor greenColor].CGColor;
+    self.bottemV.layer.mask = maskLayer;
+    
+
     
 }
 
@@ -185,4 +223,13 @@
     
 }
 
+- (UIView *)bottemV {
+    
+    if (!_bottemV) {
+        
+        _bottemV = [[UIView alloc] init];
+        _bottemV.backgroundColor = [UIColor redColor];
+    }
+    return _bottemV;
+}
 @end
