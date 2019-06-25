@@ -93,7 +93,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 //跳转设置
-                UIAlertView *alert2 = [[UIAlertView alloc]initWithTitle:@"相机访问权限已关闭" message:@"请到设置->隐私->照片->开启【中车购】服务" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                UIAlertView *alert2 = [[UIAlertView alloc]initWithTitle:@"相机访问权限已关闭" message:@"请到设置->隐私->照片->开启服务" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
                 
                 [alert2 show];
             });
